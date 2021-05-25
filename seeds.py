@@ -1,5 +1,6 @@
 from app.models import User
 from app.db import Session, Base, engine
+from app.models import User, Post
 
 #drop and rebuild tables
 Base.metadata.drop_all(engine)
@@ -14,6 +15,15 @@ db.add_all([
     User(username="iboddam2", email="cstoneman2@last.fm", password="password123"),
     User(username="dstanmer3", email="ihellier3@goo.net.jp", password="password123"),
     User(username="djiri4", email="gmidgley4@weather.com", password="password123")
+])
+
+db.commit()
+
+db.add_all([
+    Post(title="TitleOne", post_url="one.com", user_id=1),
+    Post(title="TitleTwo", post_url="two.com", user_id=2),
+    Post(title="TitleThree", post_url="three.com", user_id=3),
+    Post(title="TitleFour", post_url="four.com", user_id=4)
 ])
 
 db.commit()
