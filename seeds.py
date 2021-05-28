@@ -20,10 +20,10 @@ db.add_all([
 db.commit()
 
 db.add_all([
-    Post(title="TitleOne", post_url="one.com", user_id=1),
-    Post(title="TitleTwo", post_url="two.com", user_id=2),
-    Post(title="TitleThree", post_url="three.com", user_id=3),
-    Post(title="TitleFour", post_url="four.com", user_id=4)
+    Post(title="TitleOne", post_url="post/1", user_id=1),
+    Post(title="TitleTwo", post_url="post/2", user_id=2),
+    Post(title="TitleThree", post_url="post/3", user_id=3),
+    Post(title="TitleFour", post_url="post/4", user_id=4)
 ])
 
 db.commit()
